@@ -1,0 +1,55 @@
+/* Links */
+a.blink {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    border: 5px solid #3537c2;
+    padding: 0.2rem 2rem;
+    background-color: #4143d5;
+    border-radius: 50px;
+}
+
+a.blink:hover {
+    font-size: 1.6rem;
+    animation: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.background_image {
+    background-image: url("background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    filter: blur(50px);
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+blockquote {
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2e0000;
+}
+
+/* Illustration */
+.illustration_credit {
+    margin: 50px;
+    position: absolute;
+    font-style: italic;
+    margin-top: 110%; 
+    text-align: center;
+}
+
+.illustration_credit.a {
+    size: 500px;
+    margin: 50px;
+    margin-right: 100px;
+    position: absolute;
+    font-style: bold;
+}
