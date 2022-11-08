@@ -12,18 +12,16 @@ a.blink {
     border-radius: 50px;
 }
 
+body {
+    background-image: url("/img/background.jpg");
+    background-size: 100%;
+    background-position: absolute;
+    background-repeat: no-repeat;
+}
+
 a.blink:hover {
     font-size: 1.6rem;
     animation: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-}
-
-.background_image {
-    background-image: url("background.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    filter: blur(50px);
 }
 
 h1 {
@@ -39,17 +37,17 @@ blockquote {
 
 /* Illustration */
 .illustration_credit {
+    color: white;
     margin: 50px;
     position: absolute;
     font-style: italic;
-    margin-top: 110%; 
+    margin-top: 80%; 
+    padding-bottom: 5%;
     text-align: center;
 }
 
-.illustration_credit.a {
-    size: 500px;
-    margin: 50px;
-    margin-right: 100px;
-    position: absolute;
-    font-style: bold;
+.illustration_credit a {
+    color: rgb(29, 44, 207);
+    text-decoration: none;
+    font-style: italic bold;
 }

@@ -1,8 +1,9 @@
 /* Container */
 .container {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-image: url("/img/background.jpg");
     overflow: hidden;
+    background-color: rgba(60, 114, 163, 0.5);
+    border-radius: 20px;
 }
 
 .container a {
@@ -12,6 +13,7 @@
     padding: 14px 18px;
     text-decoration: none;
     font-size: 18px;
+    transition: 0.3s;
 }
 
 .container a:hover {
@@ -20,7 +22,7 @@
 }
 
 .container a:active {
-    background-color: #04aa6d;
+    background-color: #1508cf72;
     color: white;
 }
 
@@ -44,13 +46,14 @@
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+    transition: 0.3s;
 }
 
 .dropmenu .content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 8em;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
