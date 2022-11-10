@@ -35,19 +35,18 @@ blockquote {
     color: #2e0000;
 }
 
-/* Illustration */
-.illustration_credit {
-    color: white;
-    margin: 50px;
+/* Illustration Credit */
+.credits {
+    color: #fff;
+    margin-top: 600px;
+    margin-left: 20px;
     position: absolute;
     font-style: italic;
-    margin-top: 80%; 
-    padding-bottom: 5%;
     text-align: center;
 }
 
-.illustration_credit a {
-    color: rgb(29, 44, 207);
+.credits a {
+    color: rgb(128, 255, 240);
     text-decoration: none;
     font-style: italic bold;
 }

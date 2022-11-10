@@ -1,0 +1,21 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box {
+    outline: 3px solid rgba(33, 109, 84, 0.5);
+    background-color: rgba(127, 255, 212, 0.5);
+    top: 5%;
+    height: 2rem;
+    width: 50%;
+    border-radius: 50px;
+    text-align: center;
+    margin: 10px;
+}

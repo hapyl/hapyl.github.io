@@ -1,0 +1,85 @@
+body {
+    background-image: url("/img/background.jpg");
+    background-position: 100%;
+    background-repeat: no-repeat;
+}
+
+.nav {
+    overflow: hidden;
+    background-color: rgba(34, 78, 111, 0.5);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.nav a {
+    float: left;
+    font-size: 32px;
+    color: #f3f3f3;
+    text-align: center;
+    padding: 16px 32px;
+    text-decoration: none;
+}
+
+.drop {
+    float: left;
+    overflow: hidden;
+}
+
+.drop button {
+    cursor: pointer;
+}
+
+.drop .button, .drop button {
+    font-size: 32px;
+    border: none;
+    outline: none;
+    color: #f3f3f3;
+    padding: 16px 32px;
+    background-color: inherit;
+    font-family: inherit;
+}
+
+.nav a:hover, .drop:hover .button, .drop:hover button {
+    background-color: #f3f3f3;
+    color: #333;
+    transition: 0.3s;
+}
+
+.drop_content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin: 16px -32px;
+}
+
+.drop_content a, .drop_content button {
+    float: none;
+    color: #333;
+    padding: 12px 32px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 26px;
+    font-style: bold;
+}
+
+.drop_content i {
+    position: relative;
+    margin-right: 10px;
+}
+
+.drop_content .about {
+    text-align: left;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.drop_content a:hover, .drop_content button:hover {
+    background-color: #ddd;
+}
+
+.drop:hover .drop_content {
+    display: block;
+}
