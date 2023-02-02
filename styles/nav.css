@@ -76,6 +76,13 @@ body {
     font-style: italic;
 }
 
+.drop_content .javadocs {
+    font-style: italic;
+    text-align: right;
+    position: relative;
+    bottom: 10px;
+}
+
 .drop_content a:hover, .drop_content button:hover {
     background-color: #ddd;
 }
