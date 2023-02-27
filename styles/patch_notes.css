@@ -1,0 +1,127 @@
+@font-face {
+    font-family: "Minecraft";
+    src: url("../fonts/Minecraft.otf");
+}
+
+iframe[seamless] {
+    border: none;
+}
+
+* {
+    background-color: rgb(33, 33, 33);
+    font-size: 15px;
+    font-family: "Minecraft";
+}
+
+.version {
+    border-radius: 1px;
+    margin: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+br {
+    margin-left: 30px;
+}
+
+.version::before {
+    content: "Version: ";
+}
+
+* {
+    text-align: left;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h2.ability::after,
+h2.ability::before {
+    content: " ✨ ";
+}
+
+h2.classes::after,
+h2.classes::before {
+    content: " 🤺 ";
+}
+
+h2.bugs::after,
+h2.bugs::before {
+    content: " 🐛 ";
+}
+
+h2.system::after,
+h2.system::before {
+    content: " 💻 ";
+}
+
+h1.name {
+    font-size: 30px;
+    margin-left: -20px;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: left;
+    font-size: 20px;
+}
+
+h1 p,
+h1 p::before {
+    font-weight: normal;
+    text-decoration: none;
+    content: " - ";
+    margin-left: 5px;
+}
+
+p br {
+    margin-left: 20px;
+}
+
+p {
+    font-size: 14px;
+    margin: 2px;
+    text-align: left;
+    text-decoration: none !important;
+    font-weight: none !important;
+}
+
+p::before {
+    content: "- ";
+}
+
+/*  */
+
+div.title {
+    font-size: 30px;
+    margin-left: -20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    text-align: left;
+}
+
+div.name {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+div.name p {
+    font-weight: normal;
+    text-decoration: underline;
+    content: " -- ";
+    margin-left: 20px;
+}
