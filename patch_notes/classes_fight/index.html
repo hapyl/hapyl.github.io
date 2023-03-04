@@ -9,18 +9,45 @@
 
     <link rel="stylesheet" href="../../styles/patch_notes.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-   
-
 </head>
 
 <body>
+    <div class="navigation">
+        <h1>
+            Welcome to the Classes Fight patch notes page!
+        </h1>
 
+        <div>
+            Below, you can see patch notes the the latest game update.
+            <div>
+                Fields colored <a class="nerf">Red</a> represent a nerf.
+            </div>
+            <div>
+                Fields colored <a class="buff">Green</a> represent a buff.
+            </div>
+            <div>
+                Fields colored <a class="change">Yellow</a> represent change that may or may not result in a buff or nerf.
+            </div>
+        </div>
 
-    <!-- Load patch notes from script -->
-    <!-- <script src="app.js"></script> -->
+        <div>
+            <br>
+            You can browse older versions here:
+            <select id="choose_version" onchange="location.reload()">
+                <option value="1.5">1.5 (Latest)</option>
+                <option value="1.4">1.4</option>
+                <option value="1.3">1.3</option>
+            </select>
+        </div>
+    </div>
 
-    <div id="v1_4_1"></div>
-    <script>$(function(){$("#v1_4_1").load("version/1.4.1.html");});</script> 
+    <div id="version"></div>
+    <script>
+        $(function () {
+            var value = document.getElementById("choose_version").value;
+            $("#version").load("version/" + value + ".html");
+        });
+    </script>
 
 </body>
 
