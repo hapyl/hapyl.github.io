@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[hapyl] Genshin Tools</title>
+
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="styles/tools.css">
+</head>
+
+<body>
+
+    <div class="ar_calc center">
+        <h1>
+            AR Calculator
+        </h1>
+        <div>
+            <div class="input">
+                <label for="inputCurrentAr">Your current AR?</label>
+                <input type="number" id="inputCurrentAr" min="1" max="59" onchange="handleInputAR(this)">
+            </div>
+
+            <div class="input">
+                    <label for="inputDesiredAr">Your desired AR?</label>
+                <input type="number" id="inputDesiredAr" min="2" max="60" readonly="true">
+            </div>
+
+            <div class="input">
+                <label for="input_ar_current_xp" id="inputCurrentExpLabel">How much exp do you have?</label>
+                <input type="text" id="inputCurrentExp">
+            </div>
+
+            <div class="input">
+                How many commisions will you complete daily?
+                <br>
+                <input type="radio" name="inputCommissions" value="1">1
+                <input type="radio" name="inputCommissions" value="2">2
+                <input type="radio" name="inputCommissions" value="3">3
+                <input type="radio" name="inputCommissions" value="4">4
+            </div>
+
+            <div class="input">
+                <label for="inputResin">How much resin will you spend every day?</label>
+                <input type="number" id="inputResin" min="1" max="9999" placeholder="180">
+            </div>
+
+            <div class="input">
+                <label for="inputTransientResin">Will you buy and use transient resin?</label>
+                <input type="checkbox" id="inputTransientResin">
+
+            </div>
+            
+            <button id="ar_calc" onclick="calculate()">
+                Calculate
+            </button>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

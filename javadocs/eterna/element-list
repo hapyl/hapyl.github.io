@@ -5,12 +5,14 @@ me.hapyl.spigotutils.builtin.gui
 me.hapyl.spigotutils.config
 me.hapyl.spigotutils.module
 me.hapyl.spigotutils.module.addons
+me.hapyl.spigotutils.module.addons.annotate
 me.hapyl.spigotutils.module.annotate
 me.hapyl.spigotutils.module.block
 me.hapyl.spigotutils.module.chat
 me.hapyl.spigotutils.module.chat.gradient
 me.hapyl.spigotutils.module.collection
 me.hapyl.spigotutils.module.command
+me.hapyl.spigotutils.module.command.completer
 me.hapyl.spigotutils.module.config
 me.hapyl.spigotutils.module.entity
 me.hapyl.spigotutils.module.error
@@ -23,7 +25,7 @@ me.hapyl.spigotutils.module.inventory.gui
 me.hapyl.spigotutils.module.inventory.item
 me.hapyl.spigotutils.module.locaiton
 me.hapyl.spigotutils.module.math
-me.hapyl.spigotutils.module.math.gometry
+me.hapyl.spigotutils.module.math.geometry
 me.hapyl.spigotutils.module.math.nn
 me.hapyl.spigotutils.module.math.trace
 me.hapyl.spigotutils.module.nbs
@@ -46,6 +48,7 @@ me.hapyl.spigotutils.module.reflect.npc
 me.hapyl.spigotutils.module.reflect.npc.entry
 me.hapyl.spigotutils.module.reflect.packet
 me.hapyl.spigotutils.module.reflect.protocol
+me.hapyl.spigotutils.module.reflect.visibility
 me.hapyl.spigotutils.module.scoreboard
 me.hapyl.spigotutils.module.util
 me.hapyl.spigotutils.module.util.cd
