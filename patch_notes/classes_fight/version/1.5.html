@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClassesFight > Patch Notes > 1.5</title>
 
-    <link rel="stylesheet" href="../../../styles/patch_notes.css">
-    
+    <link rel="stylesheet" href="../../styles/patch_notes.css">
+
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
@@ -18,17 +18,17 @@
 
         <div class="nav">
             <nav>Jump To:</nav>
-            <a href="#_classes">Classes</a>
-            <a href="#_ability">Abilities</a>
-            <a href="#_map">Maps</a>
-            <a href="#_system">System</a>
-            <a href="#_bugs">Bug Fixes</a>
+            <a href="#classes" class="hyperlink">Hero Changes</a>
+            <a href="#ability" class="hyperlink">Abilities</a>
+            <a href="#map" class="hyperlink">Maps</a>
+            <a href="#system" class="hyperlink">System</a>
+            <a href="#bugs" class="hyperlink">Bug Fixes</a>
         </div>
 
         <div class="box">
 
             <div class="entry">
-                <h1 class="header" id="_classes">Classes</h1>
+                <h1 class="header" id="classes">Hero Changes</h1>
 
                 <div class="title" id="mage">Mage</div>
                 <div>
@@ -117,9 +117,20 @@
                         </div>
                     </div>
 
+                    <div>
+                        <div class="name">Riptide
 
-                    <p class="buff">Increased riptide hits 3 >> 5.</p>
-                    <div class="comment">Increasing riptide hits will hopefully allow players to utilize this mechanics more. But if I'm being honest, it needs a little tweaks in applications.</div>
+                            <div>Reworked:
+                                <p>Is now a status effect. (Ticking down)</p>
+                                <p>Is <u>not</u> removed upon executing, instead starts 2.5s cooldown.</p>
+                                <p>Charge shots can now trigger the effect as well as melee.</p>
+                                <p>Ultimate applies significantly more Riptide than charged shots.</p>
+                            </div>
+
+                            <p class="buff">Increased riptide hits 3 >> 5.</p>
+                            <div class="comment">These changes should allow players to utilize this mechanic more.</div>
+                        </div>
+                    </div>
                 </div>
 
                 <div>
@@ -157,13 +168,21 @@
                 <div>
                     <div class="title" id="dark_mage">Dark Mage</div>
 
+                    <div class="name">Weapon
+                        <p>Renamed weapon "Wand" >> "Ancient Wand".</p>
+                        <div class="comment">Lore</div>
+                    </div>
+
+                    <div class="name">Ability Cast
+                        <p>Dark Mage now uses <yellow>RIGHT</yellow> and <yellow>LEFT</yellow> click combination to cast spells.</p>
+                        <div class="comment">The old way of casting spells felt more unique and fitting for Dark Mage.</div>
+                    </div>
+
                     <div class="name">Shadow Clone
                         <p>Added swimming state.</p>
                         <div class="comment">If player summons clone while swimming, it will no longer just stand in water.</div>
                     </div>
 
-                    <p>Renamed weapon "Wand" >> "Ancient Wand".</p>
-                    <div class="comment">Lore.</div>
                 </div>
 
                 <div>
@@ -231,12 +250,72 @@
                         <div class="comment">Quickly gather resources from nearby blocks, then combine them in one big pile before throwing it at your enemies. Ability damage is based on the amount of blocks gathered.</div>
                     </div>
 
-                    <div>
-                        Updated element names, it has no effect on the element itself:
-                        <p>Stone -> Heavy</p>
-                        <p>Wood -> Sturdy</p>
-                        <p>Wool -> Soft</p>
+                    <div class="name">Block Maelstrom
+                        <p>Creates a block that orbits around you, dealing damage based on the element upon contact with opponents. Refreshes every 10.</p>
+                    </div>
+
+                    <div class="name">Element Changes
+                        <div>Renamed elements
+                            <p>Stone -> Heavy</p>
+                            <p>Wood -> Sturdy</p>
+                            <p>Wool -> Soft</p>
+                            <yellow>This has no effect on the element itself.</yellow>
+                        </div>
                         <div class="comment">It was confusing, when you pick up a quartz block and see that you're carrying stone 😏.</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="title" id="shark">Shark</div>
+                    <div class="name">Whirlpool
+                        <p>Added Whirlpool ability</p>
+                        <div class="comment">Create a whirlpool at your current location that pulls nearby enemies towards center.</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="title" id="troll">Troll</div>
+
+                    <div class="name">Repulsor
+                        <p>Is now range restricted.</p>
+                        <div class="comment">As it should have been, description literally says that.</div>
+                    </div>
+
+
+                    <div class="name">Last Laugh (Passive)
+                        <p>Added passive</p>
+                        <div class="comment">Your hits have 0.1% chance to instantly kill enemy!</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="title" id="vampire">Vampire</div>
+
+                    <h2 style="margin: 0; margin-left: 2rem; font-size: 2.5rem;">
+                        <green>He's back!</green>
+                    </h2>
+
+                    <div class="name">Dracula Jr.
+                        <div>Call upon the lord of bats to aid you in battle, summoning a bat that will periodically nearby attack opponents.</div>
+                        <div class="comment">Useful to passively generate blood.</div>
+                    </div>
+
+                    <div class="name">Swarm
+                        <div>Launch a swarm of bats at your enemies, rapidly dealing damage and blinding them for a short duration.</div>
+                        <div class="comment">Fast and easy way to deal damage.</div>
+                    </div>
+
+                    <div class="name">Sanguineous Morphology (Ultimate)
+                        <p>Transform into a bat and fly freely for certain duration.</p>
+                        <p>After duration ends, transform back into vampire and gain the opposite amount of blood you had upon casting (Eg: 10 -> 0, 7 -> 3, 2 -> 8) and summon Dracula Jr.</p>
+                        <p>You cannot deal damage nor gain blood during the duration!</p>
+                    </div>
+
+                    <div class="name">Blood Thirst (Passive)
+                        <p>Your health is constantly drained.</p>
+                        <p>Whenever you hit an opponent you will gain a stack of blood, up to 10 stacks.</p>
+                        <p>Drink the blood to increase your damage and heal yourself. Healing, damage boost, duration and cooldown is based on the amount of stacks consumed.</p>
+                        <div class="comment">Vampire must sustain it's health to stay in a fight!</div>
                     </div>
 
                 </div>
@@ -246,7 +325,7 @@
 
             <!-- Abilities -->
             <div class="entry">
-                <h1 class="header" id="_ability">Abilities Change</h1>
+                <h1 class="header" id="ability">Abilities Change</h1>
                 <div>
                     <div class="title">Paranoia</div>
                     <div>
@@ -258,7 +337,7 @@
 
             <!-- Map Changes -->
             <div class="entry">
-                <h1 class="header" id="_map">Map Changes</h1>
+                <h1 class="header" id="map">Map Changes</h1>
 
                 <div>
                     <div class="title">Dragon's Gorge</div>
@@ -272,7 +351,7 @@
 
             <!-- System -->
             <div class="entry">
-                <h1 class="header" id="_system">System Updates</h1>
+                <h1 class="header" id="system">System Updates</h1>
 
                 <div>
                     <div class="title">Database</div>
@@ -320,7 +399,6 @@
                     </div>
                 </div>
 
-
                 <div>
                     <div class="title">Strength Changes</div>
                     <div>
@@ -330,6 +408,15 @@
                         <div class="buff">Ranged damage is now affected by strength.</div>
                         <div class="comment">I actually think it was, but it wasn't. Magic I guess.</div>
                     </div>
+                </div>
+
+                <div>
+                    <div class="title">Parkour</div>
+
+                    <div>
+                        Parkour is back! Jump your way into the best players.
+                    </div>
+
                 </div>
 
                 <div>
@@ -375,20 +462,25 @@
                     </div>
                 </div>
 
+                <div>
+                    <div class="title">Statistics</div>
+                    <div>
+                        <p>Every hero statistic is now tracked: kills, deaths, ability usage etc.</p>
+                    </div>
+                </div>
 
                 <div>
                     <div class="title">Other Changes</div>
                     <div>
-                        <p>
-                            Levers are now interactable.
-                        </p>
+                        <p>Levers are now interactable.</p>
+                        <p>Added ability to toggle notifications.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Bug Fixes -->
             <div>
-                <h1 class="header" id="_bugs">Bug Fixes</h1>
+                <h1 class="header" id="bugs">Bug Fixes</h1>
                 <div>
                     <p>Fixed a bug with Charged Talents, where cooldown countdown was global instead of per-player.</p>
                     <p>Fixed Dark Mage's Shadow Clone blinding the Mage instead of players around it.</p>
@@ -403,8 +495,15 @@
                     <p>Fixed a bug, where Climb ability would not boost player.</p>
                     <p>Fixed a bug, where stopping the game while players are still hidden will make them invisible in the lobby.</p>
                     <p>Fixed a bug, where talent's ultimate points regeneration would show for Passive and Ultimate talents.</p>
+                    <p>Fixed a critical bug, where player wasn't removed from a team upon leaving, breaking the game.</p>
+                    <p>Fixed a bug, where invisible players were able to deal damage. (Needs testing)</p>
+                    <p>Fixed a bug, where death from fall damage would not count as death.</p>
+                    <p>Fixed a type in heroes role descriptions.</p>
+                    <p>Fixed a bug preventing players to remove lobby items from their inventory.</p>
+                    <p>Fixed a bug where there was an extra empty line of code in GameTask class.</p>
 
-                    <br>And Many more!
+                    <br>
+                    <div style="text-align: center; color: chartreuse;">And Many more!</div>
                 </div>
 
             </div>

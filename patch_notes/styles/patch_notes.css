@@ -25,7 +25,8 @@ html {
     color: white;
 }
 
-.grid div, .grid p {
+.grid div,
+.grid p {
     margin-inline: 1rem;
 }
 
@@ -42,17 +43,17 @@ html {
     position: relative;
     font-size: 50px;
     font-family: "Minecraft";
-
     text-align: center;
 }
 
 h1.header {
     background-color: rgba(137, 138, 143, 0.072);
-    border-radius: 10px;
+    /* border-radius: 10px; */
     text-align: center;
     font-size: 5rem;
     margin: 0;
     margin-block: 1rem;
+    margin-inline: -1rem;
 }
 
 div.title {
@@ -112,29 +113,34 @@ br {
 
 /* Tags ::before and ::after */
 
-#_bugs::after,
-#_bugs::before {
+#bugs::after,
+#bugs::before {
     content: "🐛 ";
 }
 
-#_classes::after,
-#_classes::before {
+#classes::after,
+#classes::before {
     content: "🤺 ";
 }
 
-#_system::after,
-#_system::before {
+#system::after,
+#system::before {
     content: "💻 ";
 }
 
-#_map::after,
-#_map::before {
+#map::after,
+#map::before {
     content: "🍁 ";
 }
 
-#_ability::after,
-#_ability::before {
+#ability::after,
+#ability::before {
     content: "✨ ";
+}
+
+#cosmetics::after,
+#cosmetics::before {
+    content: "💅 ";
 }
 
 /* Navigation */
@@ -163,15 +169,9 @@ u {
 
 .nav {
     text-align: center;
-    padding: 10px;
     background-color: rgb(34, 34, 33);
-    border-radius: 10px;
-}
-
-.nav a {
-    margin-inline: 0.5rem;
-    color: rgb(234, 237, 165);
-    text-decoration: none;
+    padding-block: 10px;
+    margin-block: 1rem;
 }
 
 /* Back to top button */
@@ -183,4 +183,24 @@ u {
 
 .hidden {
     display: none;
+}
+
+.hyperlink {
+    color: rgb(234, 237, 165);
+    text-decoration: none;
+}
+
+.hyperlink:hover {
+    /* Animate text */
+    color: rgb(237, 208, 165);
+}
+
+/* Coloring */
+
+yellow {
+    color: #FFFF55;
+}
+
+green {
+    color: #55FF55;
 }
