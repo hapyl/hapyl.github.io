@@ -162,6 +162,9 @@
 
                     <p class="nerf">Reduced weapon damage 10 >> 6.5</p>
                     <div class="comment">Vortex felt too powerful in close combat. The damage decrease in exchanged for Star Align damage increase shouldn't change his power level.</div>
+                    <br>
+
+                    <p>Sword of Thousands Stars's now starts with cooldown.</p>
 
                 </div>
 
@@ -214,6 +217,10 @@
                         <p>Added a little animation.</p>
                     </div>
 
+                    <div class="name">Moonteorite (Ultimate)
+                        <p>Fixed radius calculations.</p>
+                    </div>
+
                     <p class="change">Reduced weapon damage 8 >> 4.5 due to changed in projectile calculations.</p>
                 </div>
 
@@ -230,7 +237,17 @@
 
                         <p>Added an indicator when player is in Dark Cover.</p>
                         <p>Added UI component of Dark Cover cooldown in actionbar.</p>
+                        <p>Improved Extreme Focus's target entity calculations.</p>
                     </div>
+
+                    <div class="name">Shadow Prism
+                        <p class="change">Added windup of 1s before teleportation.</p>
+                    </div>
+
+                    <div class="name">Shrouded Step
+                        <p>Leaving Dark Cover while Shrouded Step is traveling will end ability and create a clone at it's current location. The clone explode after a short delay or upon hit damaging nearby opponents.</p>
+                    </div>
+
                 </div>
 
                 <div>
@@ -267,10 +284,21 @@
 
                 <div>
                     <div class="title" id="shark">Shark</div>
+
+                    <div class="name">Submerge
+                        <div class="buff">Reduced cooldown 10s -> 5s.</div>
+                    </div>
+
                     <div class="name">Whirlpool
                         <p>Added Whirlpool ability</p>
                         <div class="comment">Create a whirlpool at your current location that pulls nearby enemies towards center.</div>
                     </div>
+
+                    <div class="name">Oceanborn/Sturdy Claws (Passive)
+                        <div class="nerf">Reduced walking speed while in walker 0.6 -> 0.4.</div>
+                        <div class="buff">Increased critical damage 5 -> 15.</div>
+                    </div>
+
                 </div>
 
                 <div>
@@ -296,7 +324,7 @@
                     </h2>
 
                     <div class="name">Dracula Jr.
-                        <div>Call upon the lord of bats to aid you in battle, summoning a bat that will periodically nearby attack opponents.</div>
+                        <div>Call upon the lord of bats to aid you in battle, summoning a bat that will periodically attack nearby opponents.</div>
                         <div class="comment">Useful to passively generate blood.</div>
                     </div>
 
@@ -316,6 +344,42 @@
                         <p>Whenever you hit an opponent you will gain a stack of blood, up to 10 stacks.</p>
                         <p>Drink the blood to increase your damage and heal yourself. Healing, damage boost, duration and cooldown is based on the amount of stacks consumed.</p>
                         <div class="comment">Vampire must sustain it's health to stay in a fight!</div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div class="title" id="techie">Techie</div>
+
+                    <div class="name">Lockdown (Ultimate)
+                        <p class="nerf">Reduced health 200 -> 100.</p>
+                        <p>Now respects teammates.</p>
+                    </div>
+
+                    <div class="name">Cyber Cage
+                        <p>Now has a short windup before becoming active.</p>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div class="title" id="pytaria">Pytaria</div>
+                    
+                    <div class="name">Flower Escape
+                        <p>Added animation.</p>
+                    </div>
+
+                    <div class="name">Feel the Breeze (Ultimate)
+                        <p class="buff">Increased damage 10 -> 30.</p>
+                        <p>Now respects teammates.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="title" id="spark">Spark</div>
+                    
+                    <div class="name">Blinding Fire
+                        <p>Now only blinds whoever is looking at it.</p>
                     </div>
 
                 </div>
@@ -444,6 +508,7 @@
                         <p>Added draw for Deathmath.</p>
                         <p>Players can longer see other's ultimate charge unless in a team.</p>
                         <p>Changed SlotPattern in map selection GUI from DEFAULT >> FANCY.</p>
+                        <p>Updated GUI for Hero selections.</p>
                     </div>
                 </div>
 
@@ -465,7 +530,7 @@
                 <div>
                     <div class="title">Statistics</div>
                     <div>
-                        <p>Every hero statistic is now tracked: kills, deaths, ability usage etc.</p>
+                        <p>Every hero statistic is now tracked: kills, deaths, wins, ability usage etc.</p>
                     </div>
                 </div>
 
@@ -500,7 +565,18 @@
                     <p>Fixed a bug, where death from fall damage would not count as death.</p>
                     <p>Fixed a type in heroes role descriptions.</p>
                     <p>Fixed a bug preventing players to remove lobby items from their inventory.</p>
-                    <p>Fixed a bug where there was an extra empty line of code in GameTask class.</p>
+                    <p>Fixed a bug, where there was an extra empty line of code in GameTask class.</p>
+                    <p>Fixed a bug, where Giant Sword cosmetics would have collision.</p>
+                    <p>Fixed a bug, where if player leaves Kills Deathmatch, they cannot rejoin.</p>
+                    <p>Fixed a bug, where high level Weakness affects client and ignore custom calculations.</p>
+                    <p>Fixed a bug, where Dr. Ed's shield would throw StackOverflow error.</p>
+                    <p>Fixed a bug, where BOOM BOW did not set damager.</p>
+                    <p>Fixed a bug, where physical actions would activate Dark Mage's staff.</p>
+                    <p>Fixed a bug, where Mage's souls would not reset upon death.</p>
+                    <p>Fixed a bug, where Spark's ultimate would not reborn.</p>
+                    <p>Fixed a bug, where Spark's could not die.</p>
+                    <p>Fixed a bug, where Library Void teleports would not reset upon death.</p>
+                    <p>Fixed a <b><i>lot</i></b> of typos.</p>
 
                     <br>
                     <div style="text-align: center; color: chartreuse;">And Many more!</div>
