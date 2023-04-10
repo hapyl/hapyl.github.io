@@ -1,0 +1,106 @@
+@font-face {
+    font-family: "Minecraft";
+    src: url("../fonts/Minecraft.otf");
+}
+
+body {
+    font-family: "Minecraft";
+}
+
+hr {
+    width: 100%;
+    border: none;
+    height: 5px;
+    background-color: #1b1c1e;
+}
+
+h1.main {
+    margin-block: 2rem;
+    text-align: center;
+}
+
+.comment {
+    font-style: italic;
+    color: rgb(255, 255, 255, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    padding-block: 1rem;
+    font-size: xx-large;
+}
+
+h5 {
+    padding-block: 1rem;
+    font-size: x-large;
+}
+
+.container-fluid {
+    padding-inline: 10rem;
+}
+
+img::before {
+    content: "";
+}
+
+img::after {
+    content: "";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.bg-darker {
+    background-color: #212529;
+}
+
+.bg-even-darker {
+    background-color: #1b1c1e;
+}
+
+.nerf {
+    color: red;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.container .content {
+    flex: 1;
+}
+
+li {
+    list-style-type: "• ";
+}
+
+ul.topic {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    width: 100%;
+}
+
+.hero-title {
+    margin-left: 0;
+}
+
+/* ul.topic:nth-child(odd) {
+    background-color: #212529;
+}
+
+ul.topic:nth-child(even) {
+    background-color: #333;
+} */

@@ -1,0 +1,6 @@
+body {
+    background-image: url("../img/background.jpg");
+    background-size: 100%;
+    background-position: absolute;
+    background-repeat: no-repeat;
+}

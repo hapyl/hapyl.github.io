@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Game Patch Notes</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg bg-even-darker py-3">
+		<a class="navbar-brand text-white text-bold" href="#">Classes Fight Patch Notes</a>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+
+				<!-- Version Nav List -->
+				<li class="nav-item">
+					<a class="nav-link text-white-50" href="#version1.5">Version 1.5</a>
+				</li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container-fluid bg-darker text-white">
+		<div class="row">
+
+			<div class="col-md-12" id="version1.5">
+				<h1 class="text-center py-3">Version 1.5</h1>
+
+				<div>
+					<h1 class="main">Hero Changes</h1>
+
+					<!-- Mage -->
+					<ul id="mage">
+						<div class="hero-title container">
+							<img src="../hero_head/mage.png" alt="Mage" />
+							<div class="content">
+								<h1>Mage</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Arcane Mute</h5>
+							<ul>
+								<li class="text-danger">Duration reduced from 12s >> 4s.</li>
+								<li class="text-danger">Cooldown increased 30s >> 35s</li>
+								<div class="comment">Drastically reduced duration of the ability, since the prototype version felt way too punishing.</div>
+
+								<li>Added a text indication wherever player is cursed by Arcane Mute.</li>
+								<div class="comment">It was unclear whenever player has the curse. 🤷‍♀️</div>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Dragon Scale (Strength Ultimate)</h5>
+							<ul>
+								<li class="text-danger">Decreased strength lvl 7 >> 4.</li>
+								<div class="comment">The one shot was fun and all, but level 7 strength was +240% damage increase! It's +100% now, if you're interested.</div>
+							</ul>
+						</ul>
+
+						<hr>
+					</ul>
+
+					<!-- Alchemist -->
+					<ul id="alchemist">
+						<div class="hero-title container">
+							<img src="../hero_head/alchemist.png" alt="Alchemist" />
+							<div class="content">
+								<h1>Alchemist</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Brewing Pot</h5>
+							<ul>
+								<li class="text-success">Increased brewing speed by 50%.</li>
+								<div class="comment">Brewing speed felt too slow, considering the Alchemist is basically useless. New brewing speed should be around ~33s.</div>
+
+
+								<li>Added brewing animation.</li>
+								<div class="comment">Finally!</div>
+
+
+								<li>Added a brief cooldown for interacting with Brewing Pot.</li>
+								<div class="comment">Players sometimes could've bug the stick, both having it as a weapon and in a cauldron.</div>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Potion</h5>
+							<ul>
+								<li class="text-success">Reduces Strength lvl 4 >> 3.</li>
+								<div class="comment">Strength is just too powerful...</div>
+
+
+								<li class="text-warning">Reduced intoxication gain 15 >> 10 per potion.</li>
+								<dev class="comment">Since the strength level is reduced, intoxication gain reduce felt right.</dev>
+
+								<div class="text-warning">Changed Strength scaling, see System Updates below.</div>
+							</ul>
+						</ul>
+
+						<hr>
+					</ul>
+
+					<!-- Archer -->
+					<ul id="archer">
+						<div class="hero-title container">
+							<img src="../hero_head/archer.png" alt="Archer" />
+							<div class="content">
+								<h1>Archer</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Shock Dart</h5>
+							<ul>
+								<li class="text-success">Increased max damage 9 >> 15.</li>
+								<li class="text-warning">Reduced distance damage.</li>
+								<div class="comment">This will punish players who decided to stay inside the range while being more forgiving to players closer to the edge.</div>
+							</ul>
+						</ul>
+
+						<li>Renamed weapon "Harbinger" >> "Bow of Destiny".</li>
+						<div class="comment">Not to be confusing with the Harbinger! And also it's his lore weapon's name, I kinda forgor 💀</div>
+						<li class="text-warning">Reduced weapon damage 8 >> 5 due to changed in projectile calculations.</li>
+
+						<hr>
+					</ul>
+
+					<!-- Harbinger -->
+					<ul id="harbinger">
+						<div class="hero-title container">
+							<img src="../hero_head/harbinger.png" alt="Harbinger" />
+							<div class="content">
+								<h1>Harbinger</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Melee Stance</h5>
+							<ul>
+								<li class="text-success">Increased weapon damage 7.5 >> 8.</li>
+								<li class="text-warning">Increased ultimate damage 33.3 >> 40.</li>
+								<div class="comment">Increasing melee damage will force players to utilize Melee Stance more, instead of spamming with a bow.</div>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Range Stance</h5>
+							<ul>
+								<li class="text-danger">Reduced bow damage 5.0 >> 2.0.</li>
+								<div class="comment">This isn't a big decrease as it seams, since the projectile calculations change. But it is significant.</div>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Tidal Wave</h5>
+							<ul>
+								<li>Added tidal wave talent.</li>
+								<div class="comment">Summon a giant wave that pushes enemies away from you and applies Riptide to them.</div>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Riptide</h5>
+							<ul>
+								Received a rework:
+								<ul>
+									<li>Is now a status effect. (Ticking down)</li>
+									<li>Is <u>not</u> removed upon executing, instead starts 2.5s cooldown.</li>
+									<li>Charge shots can now trigger the effect as well as melee.</li>
+									<li>Ultimate applies significantly more Riptide than charged shots.</li>
+								</ul>
+
+								<li class="text-success">Increased riptide hits 3 >> 5.</li>
+								<div class="comment">These changes should allow players to utilize this mechanic more.</div>
+							</ul>
+						</ul>
+						<hr>
+					</ul>
+
+					<!-- Juju -->
+					<ul id="juju">
+						<div class="hero-title container">
+							<img src="../hero_head/juju.png" alt="Juju" />
+							<div class="content">
+								<h1>JuJu the Bandit</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Ultimate Change</h5>
+							<ul>
+								Reworked ultimate:
+								<ul>
+									<li>During the ultimate, you can shoot instantly, and shot arrows will be considered as Elusive Arrows.</li>
+									<li class="text-success">Increased ultimate duration 6s >> 10s.</li>
+									<li class="text-warning">Increased cost 50 >> 65</li>
+								</ul>
+							</ul>
+						</ul>
+
+						<br>
+						<li class="text-warning">Reduced weapon damage 8 >> 4 due to changed in projectile calculations.</li>
+
+						<hr>
+					</ul>
+
+					<!-- Vortex -->
+					<ul id="vortex">
+						<div class="hero-title container">
+							<img src="../hero_head/vortex.png" alt="Vortex" />
+							<div class="content">
+								<h1>Vortex</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Sword of Thousands Stars</h5>
+							<ul>
+								<li class="text-danger">Base damage 10 >> 6.5.</li>
+								<div class="comment">Vortex felt too powerful in close combat. The damage decrease in exchanged for Star Align damage increase shouldn't change his power level.</div>
+								<li class="text-success">Increase vortex damage 0 >> 1/tick.</li>
+								<div class="comment">Had to introduce damage again since the old damaging method doesn't work anymore. But also this ability should feel more powerful given it had long cooldown.</div>
+								<li>Now starts with cooldown equal to 50% of normal cooldown.</li>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Star Align</h5>
+							<ul>
+								<li class="text-success">Astral slash damage increased 5 >> 20.</li>
+								<div class="comment">As main way of damaging, Astrals Stars felt more like a movement ability rather than damaging.</div>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Weapon</h5>
+							<ul>
+								<li class="text-success">Astral slash damage increased 5 >> 20.</li>
+								<div class="comment">As main way of damaging, Astrals Stars felt more like a movement ability rather than damaging.</div>
+							</ul>
+						</ul>
+
+						<hr>
+					</ul>
+
+					<!-- Dark Mage -->
+					<ul id="dark_mage">
+						<div class="hero-title container">
+							<img src="../hero_head/dark_mage.png" alt="Dark Mage" />
+							<div class="content">
+								<h1>Dark Mage</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Weapon</h5>
+							<ul>
+								<li class="text-success">Renamed "Wand" >> "Ancient Wand".</li>
+								<div class="comment">Lore.</div>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Ability Cast</h5>
+							<ul>
+								<li>Dark Mage now uses <yellow>RIGHT</yellow> and <yellow>LEFT</yellow> click combination to cast spells.</li>
+								<div class="comment">The old way of casting spells felt more unique and fitting for Dark Mage.</div>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Shadow Clone</h5>
+							<ul>
+								<li>Added swimming state.</li>
+								<div class="comment">If player summons clone while swimming, it will no longer just stand in water.</div>
+							</ul>
+						</ul>
+
+						<hr>
+					</ul>
+
+					<!-- Ender -->
+					<ul id="ender">
+						<div class="hero-title container">
+							<img src="../hero_head/ender.png" alt="Ender" />
+							<div class="content">
+								<h1>Ender</h1>
+							</div>
+						</div>
+
+						<li>Added a teleport from below a block check to prevent players from going out of bounds.</li>
+						<div class="comment">Teleporting is fun until you softlock yourself.</div>
+
+						<hr>
+					</ul>
+
+					<!-- Nightmare -->
+					<ul id="nightmare">
+						<div class="hero-title container">
+							<img src="../hero_head/nightmare.png" alt="Nightmare" />
+							<div class="content">
+								<h1>Nightmare</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Paranoia</h5>
+							<ul>
+								<li class="text-warning">Increased paranoia affect time 3s -> 5s.</li>
+								<div class="comment">It is a nerf because old Paranoia was applying incorrectly, blinding players for up to 30s!!!</div>
+							</ul>
+						</ul>
+
+						<hr>
+					</ul>
+
+					<!-- Hercules -->
+					<ul id="hercules">
+						<div class="hero-title container">
+							<img src="../hero_head/hercules.png" alt="Hercules" />
+							<div class="content">
+								<h1>Nightmare</h1>
+							</div>
+						</div>
+
+						<li>Added a fail-safe to return trident if it has been gone for more than 15 seconds.</li>
+
+						<hr>
+					</ul>
+
+					<!-- Moonwalker -->
+					<ul id="moonwalker">
+						<div class="hero-title container">
+							<img src="../hero_head/moonwalker.png" alt="Moonwalker" />
+							<div class="content">
+								<h1>Moonwalker</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Moonslite Pillar</h5>
+							<ul>
+								<li>Added a little animation.</li>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Moonteorite (Ultimate)</h5>
+							<ul>
+								<li class="text-warning">Adjusted radius calculations.</li>
+							</ul>
+						</ul>
+
+						<br>
+						<li class="text-warning">Reduced weapon damage 8 >> 4.5 due to changed in projectile calculations.</li>
+
+						<hr>
+					</ul>
+
+					<!-- Shadow Assassin -->
+					<ul id="shadow_assassin">
+						<div class="hero-title container">
+							<img src="../hero_head/shadow_assassin.png" alt="Shadow Assassin" />
+							<div class="content">
+								<h1>Shadow Assassin</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Dark Cover</h5>
+							<ul>
+								<li class="text-danger">Added penalty for taking damage of 3s.</li>
+								<li class="text-danger">Increased penalty for taking damage <u>while</u> in Dark Cover 3s >> 10s.</li>
+								<div class="comment">Dark Cover is core ability for Shadow Assassin, but when he hides for the whole match is where fun disappears.</div>
+
+								<li>Added an indicator when player is in Dark Cover.</li>
+								<li>Added UI component of Dark Cover cooldown in actionbar.</li>
+								<li>Improved Extreme Focus's target entity calculations.</li>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Shadow Prism</h5>
+							<ul>
+								<li class="text-danger">Added windup of 1 s before teleportation.</li>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Shrouded Step</h5>
+							<ul>
+								<li>Leaving Dark Cover while Shrouded Step is traveling will end ability and create a clone at it's current location. The clone explode after a short delay or upon hit damaging nearby opponents.</li>
+							</ul>
+						</ul>
+
+						<hr>
+					</ul>
+
+					<!-- Swooper -->
+					<ul id="swooper">
+						<div class="hero-title container">
+							<img src="../hero_head/swooper.png" alt="Swooper" />
+							<div class="content">
+								<h1>Swooper</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Blink</h5>
+							<ul>
+								<li>Added blink ability.</li>
+								<div class="comment">Teleport forward a short distance, passing through any non-solid blocks in the way. Cannot teleport through walls.</div>
+							</ul>
+						</ul>
+
+						<hr>
+					</ul>
+
+					<!-- Dr Ed -->
+					<ul id="dr_ed">
+						<div class="hero-title container">
+							<img src="../hero_head/dr_ed.png" alt="Dr Ed" />
+							<div class="content">
+								<h1>Dr Ed</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Block Harvest</h5>
+							<ul>
+								<li>Added Block Harvest ability.</li>
+								<div class="comment">Quickly gather resources from nearby blocks, then combine them in one big pile before throwing it at your enemies. Ability damage is based on the amount of blocks gathered.</div>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Block Maelstrom (Passive)</h5>
+							<ul>
+								<li>Added Block Maelstrom passive ability.</li>
+								<div class="comment">Creates a block that orbits around you, dealing damage based on the element upon contact with opponents. Refreshes every 10.</div>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Element Changes</h5>
+							<ul>Renamed elements:
+								<ul>
+									<li>Stone -> Heavy</li>
+									<li>Wood -> Sturdy</li>
+									<li>Wool -> Soft</li>
+								</ul>
+								<div class="comment">It was confusing, when you pick up a quartz block and see that you're carrying stone 😏.</div>
+								<li>Replaced chat message with a block sound.</li>
+								<li>Improved element calculations.</li>
+							</ul>
+						</ul>
+
+						<hr>
+					</ul>
+
+					<!-- Shark -->
+					<ul id="shark">
+						<div class="hero-title container">
+							<img src="../hero_head/shark.png" alt="Shark" />
+							<div class="content">
+								<h1>Shark</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Submerge</h5>
+							<ul>
+								<li class="text-success">Reduced cooldown 10s >> 5s.</li>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Whirlpool</h5>
+							<ul>
+								<li>Added Whirlpool ability.</li>
+								<div class="comment">Create a whirlpool at your current location that pulls nearby enemies towards center.</div>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Oceanborn/Sturdy Claws (Passive)</h5>
+							<ul>
+								<li class="text-danger">Reduced walking speed while in walker 0.6 -> 0.4.</li>
+								<li class="text-success">Increased critical damage 5 -> 15.</li>
+							</ul>
+						</ul>
+
+						<hr>
+					</ul>
+
+					<!-- Troll -->
+					<ul id="troll">
+						<div class="hero-title container">
+							<img src="../hero_head/troll.png" alt="Troll" />
+							<div class="content">
+								<h1>Troll</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Repulsor</h5>
+							<ul>
+								<li class="text-warning">Is now range restricted.</li>
+								<div class="comment">As it should have been, description literally says that.</div>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Last Laugh (Passive)</h5>
+							<ul>
+								<li>Added Last Laugh passive.</li>
+								<div class="comment">Your hits have 0.1% chance to instantly kill enemy!</div>
+							</ul>
+						</ul>
+
+						<hr>
+					</ul>
+
+					<!-- Vampire -->
+					<ul id="vampire">
+						<div class="hero-title container">
+							<img src="../hero_head/vampire.png" alt="Vampire" />
+							<div class="content">
+								<h1>Vampire</h1>
+							</div>
+						</div>
+
+						<h2 style="margin: 0; margin-left: 2rem; font-size: 2.5rem; color: crimson;">He's back!</h2>
+
+						<ul class="topic">
+							<h5>Dracula Jr.</h5>
+							<ul>
+								<li>Call upon the lord of bats to aid you in battle, summoning a bat that will periodically attack nearby opponents.</li>
+								<div class="comment">Useful to passively generate blood.</div>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Swarm</h5>
+							<ul>
+								<li>Launch a swarm of bats at your enemies, rapidly dealing damage and blinding them for a short duration.</li>
+								<div class="comment">Fast and easy way to deal damage.</div>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Sanguineous Morphology (Ultimate)</h5>
+							<ul>
+								<li>Transform into a bat and fly freely for certain duration.</li>
+								<li>After duration ends, transform back into vampire and gain the opposite amount of blood you had upon casting (Eg: 10 -> 0, 7 -> 3, 2 -> 8) and summon Dracula Jr.</li>
+								<li>You cannot deal damage nor gain blood during the duration!</li>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Blood Thirst (Passive)</h5>
+							<ul>
+								<li>Your health is constantly drained.</li>
+								<li>Whenever you hit an opponent you will gain a stack of blood, up to 10 stacks.</li>
+								<li>Drink the blood to increase your damage and heal yourself. Healing, damage boost, duration and cooldown is based on the amount of stacks consumed.</li>
+								<div class="comment">Vampire must sustain it's health to stay in a fight!</div>
+							</ul>
+						</ul>
+
+						<hr>
+					</ul>
+
+					<!-- Techie -->
+					<ul id="techie">
+						<div class="hero-title container">
+							<img src="../hero_head/techie.png" alt="Techie" />
+							<div class="content">
+								<h1>Techie</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Lockdown (Ultimate)</h5>
+							<ul>
+								<li class="text-danger">Reduced health 200 -> 100.</li>
+								<li>Now respects teammates.</li>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Cyber Cage</h5>
+							<ul>
+								<li>Now has a short windup before becoming active.</li>
+							</ul>
+						</ul>
+
+						<hr>
+					</ul>
+
+					<!-- Pytaria -->
+					<ul id="pytaria">
+						<div class="hero-title container">
+							<img src="../hero_head/pytaria.png" alt="Pytaria" />
+							<div class="content">
+								<h1>Pytaria</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Flower Escape</h5>
+							<ul>
+								<li>Added animation.</li>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Feel the Breeze (Ultimate)</h5>
+							<ul>
+								<li class="text-success">Increased damage 10 -> 30.</li>
+								<li>Now respects teammates.</li>
+							</ul>
+						</ul>
+
+						<hr>
+					</ul>
+
+					<!-- Spark -->
+					<ul id="spark">
+						<div class="hero-title container">
+							<img src="../hero_head/spark.png" alt="Spark" />
+							<div class="content">
+								<h1>Spark</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Blinding Fire</h5>
+							<ul>
+								<li>Now only blinds whoever is looking at it.</li>
+							</ul>
+						</ul>
+
+						<hr>
+					</ul>
+
+					<!-- Taker -->
+					<ul id="taker">
+						<div class="hero-title container">
+							<img src="../hero_head/taker.png" alt="Taker" />
+							<div class="content">
+								<h1>Taker</h1>
+							</div>
+						</div>
+
+						<h2 style="margin: 0; margin-left: 2rem; font-size: 2.5rem; color: chartreuse;">NEW!</h2>
+
+						<ul class="topic">
+							<h5>Fatal Reap</h5>
+							<ul>
+								<li>Instantly charge opponents' bones with a powerful scythe swipe and unleash a devastating attack that shatters their bones, dealing 20% of their current health as damage.</li>
+								<li>Convert some broken bones directly into Spiritual Bones.</li>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Hook of Death</h5>
+							<ul>
+								<li>Instantly consume Spiritual Bone to launch a chain that travels in straight line up to certain amount of blocks or until opponent is hit. After, retracts back to you.</li>
+								<li>If opponent is hit, they will be retracted with chains, take 10 of their current health as damage will be slowed and withered for short duration.; Additionally, the cooldown is reduced by 50%.</li>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Spiritual Bones</h5>
+							<ul>
+								You may posses up to certain amount of Spiritual Bones that orbit around you. With each bone you will:
+								<ul>
+									<li>Deal more damage.</li>
+									<li>Take less damage.</li>
+									<li>Heal for percentage of the damage dealt.</li>
+								</ul>
+								<li>Some abilities might cost bones to use.</li>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Embodiment of Death (Ultimate)</h5>
+							<ul>
+								<li>Instantly consume all Spiritual Bones and cloak yourself in darkness.</li>
+								<li>While cloaked, gain resistance and heal rapidly but suffer speed reduction; Additionally, shoot death projectiles periodically.</li>
+								<li>Healing and amount of death projectiles is based on the amount of bones consumed.</li>
+							</ul>
+						</ul>
+
+						<hr>
+					</ul>
+
+					<!-- Tamer -->
+					<ul id="tamer">
+						<div class="hero-title container">
+							<img src="../hero_head/tamer.png" alt="Tamer" />
+							<div class="content">
+								<h1>Tamer</h1>
+							</div>
+						</div>
+
+						<ul class="topic">
+							<h5>Mimicry (Ultimate)</h5>
+							<ul>
+								<li>Added Mimicry ultimate.</li>
+								<li>Instantly mimic your current pack to gain it's blessings!</li>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>MineOBall</h5>
+							<ul>
+								<li>Changes minions.</li>
+							</ul>
+						</ul>
+
+						<hr>
+					</ul>
+
+					<!-- Bounty Hunter -->
+					<ul id="bounty_hunter">
+						<div class="hero-title container">
+							<img src="../hero_head/bounty_hunter.png" alt="Bounty Hunter" />
+							<div class="content">
+								<h1>Bounty Hunter</h1>
+							</div>
+						</div>
+
+						<h2 style="margin: 0; margin-left: 2rem; font-size: 2.5rem; color: chartreuse;">NEW!</h2>
+
+						<ul class="topic">
+							<h5>Shorty</h5>
+							<ul>
+								<li>Shoot you double barrel to deal damage that falls off with distance.</li>
+								<li>If hit enemy is close enough, they will bleed and will be vulnerable for short duration.</li>
+								<li>This ability can be shot twice consecutively before reloading.</li>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Grappling Hook</h5>
+							<ul>
+								<li>Launch a grappling hook that travels up to certain amount of blocks.</li>
+								<li>Whenever it hits a block or an entity, it will pull you towards it.</li>
+								<li>Multiple charges; Cooldown starts after all charges are used.</li>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Smoke Bomb (Passive)</h5>
+							<ul>
+								<li>Whenever your health falls below 50%, you gain a Smoke Bomb.</li>
+								<li>Throw it to create a smoke field that blinds everyone inside it and grant you a speed boost.</li>
+							</ul>
+						</ul>
+
+						<ul class="topic">
+							<h5>Backstab (Ultimate)</h5>
+							<ul>
+								<li>Instantly teleport behind target entity and backstab them, dealing 30 damage.</li>
+							</ul>
+						</ul>
+
+						<hr>
+					</ul>
+
+					<!-- End of hero changes -->
+				</div>
+
+				<div>
+					<h1 class="main">Ability Changes</h1>
+
+					<ul class="topic">
+						<h5>Paranoia</h5>
+						<ul>
+							<li>Changed to use Darkness effect instead of Blindness.</li>
+							<li>Decoy sounds are now played more frequently.</li>
+						</ul>
+					</ul>
+
+					<!-- End of ability changes -->
+				</div>
+
+				<div>
+					<h1 class="main">Map Changes</h1>
+
+					<ul class="topic">
+						<h5>Dragon's Gorge</h5>
+						<ul>
+							<li>Cold Meter now decreases faster if player is standing near a light source. <i class="comment">blockLight>=2</i></li>
+							<li>Cold Meter now properly resets upon death.</li>
+							<li>Boosters are working again! 😮</li>
+						</ul>
+					</ul>
+
+					<ul class="topic">
+						<h5>Mid Journey</h5>
+						<ul>
+							<li>Added Mid Journey map.</li>
+							<li>Mid Journey is a fierce and treacherous arena located deep within the Nether. Its jagged walls and pillars of obsidian provide cover and obstacles for players to use to their advantage as they battle for supremacy in this dangerous realm.</li>
+						</ul>
+					</ul>
+
+					<!-- End of ability changes -->
+				</div>
+
+				<div>
+					<h1 class="main">System Updates</h1>
+
+					<ul class="topic">
+						<h5>Database</h5>
+						<ul>
+							<li>Now using MongoDb instead of yml files, host must connect to a MongoDb to use the plugin.</li>
+							<div class="comment">Might allow local config file if host is not connected to the database later.</div>
+						</ul>
+					</ul>
+
+					<ul class="topic">
+						<h5>Cosmetics</h5>
+						<ul>
+							<li>Added cosmetics. Players may spend coins to buy cosmetics and use them in battle.</li>
+							<ul>
+								There are 5 types of cosmetics as of yet:
+								<ul>
+									<li>Kill cosmetics: Executes whenever you eliminate an opponent.</li>
+									<li>Death cosmetics: Executes whenever you die.</li>
+									<li>Contrails: Trails behind you whenever you move.</li>
+									<li>Win: Displays when you win a game.</li>
+									<li>Prefix: Displayed between your selected hero and you name. Example: "Archer [PREFIX] hapyl"</li>
+								</ul>
+							</ul>
+							<li style="color: chartreuse;">You can manage cosmetics in the Cosmetics menu.</li>
+						</ul>
+					</ul>
+
+					<ul class="topic">
+						<h5>Experience System</h5>
+						<ul>
+							<li>Players are able to ear Experience by eliminating opponents, winning games or by simply surviving.</li>
+							<li>Levelling up unlocks heroes, grants cosmetics and perks that may aid you in battle.</li>
+							<li style="color: chartreuse">
+								You can access Experience menu from the Cosmetics menu.
+							</li>
+						</ul>
+					</ul>
+
+					<ul class="topic">
+						<h5>Strength Changes</h5>
+						<ul>
+							<li class="text-danger">Changed formula from +30% >> +20% of damage per strength level.</li>
+							<div class="comment">This change will try to balance all strength wielders.</div>
+
+							<li class="buff">Ranged damage is now affected by strength.</li>
+							<div class="comment">I actually think it was, but it wasn't. Magic I guess.</div>
+						</ul>
+					</ul>
+
+					<ul class="topic">
+						<h5>Parkour</h5>
+						<ul>
+							<li>Parkour is back! Jump your way into the best players.</li>
+						</ul>
+					</ul>
+
+					<ul class="topic">
+						<h5>Projectile Damage Changes</h5>
+						<ul>
+							<li class="text-warning">Projectile damage is now actually takes weapon damage value in calculations.</li>
+							<div class="comment">Due to this change, all projectile characters see damage decrease.</div>
+						</ul>
+					</ul>
+
+					<ul class="topic">
+						<h5>Deathmatch Changes</h5>
+						<ul>
+							<li>Added ability to re-join deathmatch after leaving the server.</li>
+							<li>Added a draw state, if multiple players from different teams have the same amount of kills.</li>
+						</ul>
+					</ul>
+
+					<ul class="topic">
+						<h5>Interface</h5>
+						<ul>
+							<li>Reworked win screen and title.</li>
+							<li>Optimized scoreboard</li>
+							<li>Added teammate information in TAB list.</li>
+							<li>Added draw for Deathmath.</li>
+							<li>Players can longer see other's ultimate charge unless in a team.</li>
+							<li>Changed SlotPattern in map selection GUI from DEFAULT >> FANCY.</li>
+							<li>Updated GUI for Hero selections.</li>
+						</ul>
+					</ul>
+
+					<ul class="topic">
+						<h5>Lobby Items</h5>
+						<ul>
+							<li>Added lobby items to change hero, map etc.</li>
+						</ul>
+					</ul>
+
+					<ul class="topic">
+						<h5>Teams</h5>
+						<ul>
+							<li>Lobby players are now stored by UUID instead of Player object.</li>
+							<li>Renamed "Light Purple" team to "Pink".</li>
+						</ul>
+					</ul>
+
+					<ul class="topic">
+						<h5>Statistics</h5>
+						<ul>
+							<li>Every hero statistic is now tracked: kills, deaths, wins, ability usage etc.</li>
+						</ul>
+					</ul>
+
+					<ul class="topic">
+						<h5>Other Changes</h5>
+						<ul>
+							<li>Levers are now interactable.</li>
+							<li>Added ability to toggle notifications.</li>
+						</ul>
+					</ul>
+
+					<ul class="topic">
+						<h5>Hero Icon Changes</h5>
+						<ul>
+							<li>All heroes icons are now player-heads, instead of items.</li>
+						</ul>
+					</ul>
+
+					<ul class="topic">
+						<h5>NPCs</h5>
+						<ul>
+							<li>Added NPCs.</li>
+						</ul>
+					</ul>
+
+					<ul class="topic">
+						<h5>Title Animation</h5>
+						<ul>
+							<li>Added NPCs.</li>
+						</ul>
+					</ul>
+
+					<ul class="topic">
+						<h5>Input Talents</h5>
+						<ul>
+							<li>Added Input Talents.</li>
+							<li>Input talents required either LEFT or RIGHT click to execute after equipping them.</li>
+							<li>Both LEFT and RIGHT clicks generate different effects and act like different talents.</li>
+						</ul>
+					</ul>
+
+					<!-- End of system updates -->
+				</div>
+
+				<div>
+					<h1 class="main">Map Changes</h1>
+
+					<ul class="topic">
+						<h5>Dragon's Gorge</h5>
+						<ul>
+							<li>Fixed a bug with Charged Talents, where cooldown countdown was global instead of per-player.</li>
+							<li>Fixed Dark Mage's Shadow Clone blinding the Mage instead of players around it.</li>
+							<li>Fixed a bug, where Nightmare's passive ability didn't working properly.</li>
+							<li>Fixed a bug, where Nightmare's Paranoia would not apply the effect properly.</li>
+							<li>Fixed a bug, where players would see invisibility entities upon rendering.</li>
+							<li>Fixed a bug, where JuJu's ultimate required a target block to execute.</li>
+							<li>Fixed a bug, where Effect particles were displaying for players affected by the effect.</li>
+							<li>Fixed a bug, where Ninja would fly to the moon upon being hit.</li>
+							<li>Fixed a bug, where Alchemist could spam interaction with Cauldron, resulting in duping the weapon.</li>
+							<li>Fixed a bug, where Librarian's Grimoire would throw an IndexOutOfBound exception at max level.</li>
+							<li>Fixed a bug, where Climb ability would not boost player.</li>
+							<li>Fixed a bug, where stopping the game while players are still hidden will make them invisible in the lobby.</li>
+							<li>Fixed a bug, where talent's ultimate points regeneration would show for Passive and Ultimate talents.</li>
+							<li>Fixed a critical bug, where player wasn't removed from a team upon leaving, breaking the game.</li>
+							<li>Fixed a bug, where invisible players were able to deal damage. (Needs testing)</li>
+							<li>Fixed a bug, where death from fall damage would not count as death.</li>
+							<li>Fixed a type in heroes role descriptions.</li>
+							<li>Fixed a bug preventing players to remove lobby items from their inventory.</li>
+							<li>Fixed a bug, where there was an extra empty line of code in GameTask class.</li>
+							<li>Fixed a bug, where Giant Sword cosmetics would have collision.</li>
+							<li>Fixed a bug, where if player leaves Kills Deathmatch, they cannot rejoin.</li>
+							<li>Fixed a bug, where high level Weakness affects client and ignore custom calculations.</li>
+							<li>Fixed a bug, where Dr. Ed's shield would throw StackOverflow error.</li>
+							<li>Fixed a bug, where BOOM BOW did not set damager.</li>
+							<li>Fixed a bug, where physical actions would activate Dark Mage's staff.</li>
+							<li>Fixed a bug, where Mage's souls would not reset upon death.</li>
+							<li>Fixed a bug, where Spark's ultimate would not reborn.</li>
+							<li>Fixed a bug, where Spark's could not die.</li>
+							<li>Fixed a bug, where Library Void teleports would not reset upon death.</li>
+							<li>Fixed a bug, where Tamer's minions could damage each other and Tamer.</li>
+							<li>Fixed a bug, where painting could be broken.</li>
+							<li>Fixed a bug, where talent would execute even if player has not item. (Librarian)</li>
+							<li>Fixed a bug, where typing '%' in chat would break it.</li>
+							<li>Fixed a bug, where entity calculations would count entities without AI as valid.</li>
+
+							<li>Fixed a <b><i>lot</i></b> of typos.</li>
+
+							<div class="comment" style="color: chartreuse;">And many, many more!</div>
+						</ul>
+					</ul>
+
+					<!-- End of bug fixes -->
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

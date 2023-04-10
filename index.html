@@ -1,108 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[hapyl] Main Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Hugo 0.111.3">
+<title>[hapyl] Main</title>
 
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/nav.css">
-    <link rel="stylesheet" href="styles/center.css">
+<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
+<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <script src="https://kit.fontawesome.com/f783d338b5.js" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+<style>
+  .falling-text {
+    position: relative;
+    animation-name: fall;
+    animation-duration: 1.0s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
 
+  .appearing-text {
+    position: relative;
+    animation-name: appear;
+    animation-duration: 1.0s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fall {
+    0% {
+      top: -20px;
+      opacity: 0;
+    }
+
+    100% {
+      top: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
+
+<!-- Custom styles for this template -->
+<link href="assets/css/styles.css" rel="stylesheet">
+<link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body>
-    <!-- Navigation -->
-    <div class="nav">
-        
-        <div class="drop">
-            <div class="button">
-                Plugins
-                <i class="fa-sharp fa-solid fa-caret-down"></i>
-                <div class="drop_content">
-                    <a href="https://github.com/Hapyl/EternaAPI" class="eterna" target="_blank">
-                        EternaAPI
-                        <div class="about">An API used in most of my plugins.</div>
-                        <a href="javadocs/eterna/index.html" class="javadocs">Javadocs</a>
-                    </a>
-                    <a href="https://github.com/Hapyl/MapmakerUtilitiesReloaded" target="_blank">
-                        Mapmakers Utilities
-                        <div class="about">A plugin for map makers filled with utilities.</div>
-                    </a>
-                    <a href="https://github.com/Hapyl/SurvivalEnhancements" target="_blank">
-                        Survival Enhancements
-                        <div class="about">Configurable enhancements for survival minecraft.</div>
-                    </a>
-                    <a href="https://github.com/Hapyl/ClassesFightArena" target="_blank">
-                        ClassesFight Arena
-                        <div class="about">A minigame plugin based on my old map.</div>
-                    </a>
-                    <a href="https://github.com/Hapyl/Scavenger" target="_blank">
-                        Scavenger
-                        <div class="about">A bingo-type minigame.</div>
-                    </a>
-                </div>
-            </div>
-        </div>
+<body class="d-flex h-100 text-center text-bg-dark">
 
-        <div class="drop">
-            <div class="button">
-                Find Me
-                <i class="fa-sharp fa-solid fa-caret-down"></i>
-                <div class="drop_content">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+      <div class="justify-content-center">
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
+          <a class="nav-link fw-bold py-1 px-0" href="plugins/index.html">Plugins</a>
+          <a class="nav-link fw-bold py-1 px-0 disabled-link" href="#">Find Me</a>
+          <a class="nav-link fw-bold py-1 px-0 disabled-link" href="#">Genshin</a>
+        </nav>
+      </div>
+    </header>
 
-                    <a href="https://twitter.com/hapylpage" target="_blank">
-                        <i class="fa-brands fa-twitter" style="color: #1DA1F2;"></i>
-                        on Twitter
-                    </a>
+    <main class="px-3">
+      <h1 class="falling-text">Hello, I'm hapyl</h1>
+      <p class="lead appearing-text">A Java developer who's making Minecraft plugins as a lobby.</p>
+      <!-- <p class="lead">Making Minecraft plugins as a hobby.</p> -->
+      <p class="lead">
+        <button href="#" class="btn btn-lg btn-light fw-bold border-white bg-white" onclick="alert('Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, architecto excepturi ex odio accusamus eaque! Quos iste magnam, quam vero minima cupiditate. Atque quos ex asperiores, eaque molestias esse voluptas!')">About Me</button>
+        <!-- <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">About Me</a> -->
+      </p>
+    </main>
 
-                    <a href="https://www.youtube.com/channel/UCBGFUondrKu4AOxNmkJDJqg" target="_blank">
-                        <i class="fa-brands fa-youtube" style="color: #FF0000;"></i>
-                        on YouTube
-                    </a>
+    <footer class="mt-auto text-white-50">
+      <p>Illustration by
+        <a class="nav-link fw-bold py-1 px-0" href="https://www.pixiv.net/en/artworks/92961874" target="_blank">Hiya</a>
+      </p>
+    </footer>
+  </div>
 
-                    <a href="javascript:copyDiscordTag();">
-                        <i class="fa-brands fa-discord" style="color: #7289da;"></i>
-                        hapyl#5954
-                    </a>
 
-                </div>
-            </div>
-        </div>
-
-        <div class="drop">
-            <div class="button">
-                Genshin
-                <i class="fa-sharp fa-solid fa-caret-down"></i>
-                <div class="drop_content">
-                    <a href="tools/index.html">
-                        Tools
-                        <div class="about">My very poorly made Genshin tools.</div>
-                    </a>
-                    <a href="https://enka.network/u/719868523" target="_blank">
-                        Enka.Network
-                        <div class="about">My Genshin Impact characters.</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Center -->
-    <div class="center">
-        There is nother here yet :|
-    </div>
-
-    <div class="credits">
-        Illustration by
-        <a href="https://www.pixiv.net/en/artworks/92961874">Hiya</a>
-    </div>
 
 </body>
 
