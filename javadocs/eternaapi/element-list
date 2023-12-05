@@ -5,12 +5,11 @@ me.hapyl.spigotutils.builtin.gui
 me.hapyl.spigotutils.builtin.updater
 me.hapyl.spigotutils.config
 me.hapyl.spigotutils.module
-me.hapyl.spigotutils.module.addons
-me.hapyl.spigotutils.module.addons.annotate
 me.hapyl.spigotutils.module.ai
 me.hapyl.spigotutils.module.ai.goal
 me.hapyl.spigotutils.module.annotate
 me.hapyl.spigotutils.module.block
+me.hapyl.spigotutils.module.block.display
 me.hapyl.spigotutils.module.chat
 me.hapyl.spigotutils.module.chat.gradient
 me.hapyl.spigotutils.module.collection
@@ -31,9 +30,7 @@ me.hapyl.spigotutils.module.math
 me.hapyl.spigotutils.module.math.geometry
 me.hapyl.spigotutils.module.math.nn
 me.hapyl.spigotutils.module.math.trace
-me.hapyl.spigotutils.module.nbs
 me.hapyl.spigotutils.module.nbt
-me.hapyl.spigotutils.module.nbt.nms
 me.hapyl.spigotutils.module.parkour
 me.hapyl.spigotutils.module.particle
 me.hapyl.spigotutils.module.particle.wrapped
@@ -49,9 +46,9 @@ me.hapyl.spigotutils.module.reflect.border
 me.hapyl.spigotutils.module.reflect.glow
 me.hapyl.spigotutils.module.reflect.npc
 me.hapyl.spigotutils.module.reflect.npc.entry
+me.hapyl.spigotutils.module.reflect.npc.packet
 me.hapyl.spigotutils.module.reflect.packet
 me.hapyl.spigotutils.module.reflect.protocol
-me.hapyl.spigotutils.module.reflect.visibility
 me.hapyl.spigotutils.module.scoreboard
 me.hapyl.spigotutils.module.util
 me.hapyl.spigotutils.module.util.cd
