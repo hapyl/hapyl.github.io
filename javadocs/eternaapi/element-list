@@ -46,7 +46,6 @@ me.hapyl.spigotutils.module.reflect.border
 me.hapyl.spigotutils.module.reflect.glow
 me.hapyl.spigotutils.module.reflect.npc
 me.hapyl.spigotutils.module.reflect.npc.entry
-me.hapyl.spigotutils.module.reflect.npc.packet
 me.hapyl.spigotutils.module.reflect.packet
 me.hapyl.spigotutils.module.reflect.protocol
 me.hapyl.spigotutils.module.scoreboard
