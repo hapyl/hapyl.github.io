@@ -12,11 +12,13 @@ me.hapyl.spigotutils.module.block
 me.hapyl.spigotutils.module.block.display
 me.hapyl.spigotutils.module.chat
 me.hapyl.spigotutils.module.chat.gradient
+me.hapyl.spigotutils.module.chat.messagebuilder
 me.hapyl.spigotutils.module.collection
 me.hapyl.spigotutils.module.command
 me.hapyl.spigotutils.module.command.completer
 me.hapyl.spigotutils.module.config
 me.hapyl.spigotutils.module.entity
+me.hapyl.spigotutils.module.entity.packet
 me.hapyl.spigotutils.module.error
 me.hapyl.spigotutils.module.event.parkour
 me.hapyl.spigotutils.module.event.quest
@@ -43,6 +45,7 @@ me.hapyl.spigotutils.module.quest.objectives
 me.hapyl.spigotutils.module.record
 me.hapyl.spigotutils.module.reflect
 me.hapyl.spigotutils.module.reflect.border
+me.hapyl.spigotutils.module.reflect.fakeplayer
 me.hapyl.spigotutils.module.reflect.glow
 me.hapyl.spigotutils.module.reflect.npc
 me.hapyl.spigotutils.module.reflect.npc.entry
