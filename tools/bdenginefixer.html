@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BDengine File Fixer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: rgb(43, 48, 53) !important;
+        }
+
+        html {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        input,
+        button {
+            margin: 10px;
+            padding: 8px;
+        }
+
+        #message {
+            color: rgb(10, 190, 10);
+            margin-top: 10px;
+        }
+
+        #error {
+            color: red;
+            margin-top: 10px;
+        }
+
+        .bg2 {
+            background-color: rgb(43, 48, 53) !important;
+            padding-bottom: 10px;
+            padding-top: 20px;
+        }
+    </style>
+    <!-- Pako for GZIP compression/decompression -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
+
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="d-flex h-100 text-center text-bg-dark dark">
+
+    <section class="text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">BDEngine Head Texture Fixer</h1>
+                <p class="lead text-white-50">A fixer utility for .bdengine files to fix painted head bug.</p>
+            </div>
+        </div>
+
+        <div class="container bg2">
+            <input type="file" id="fileInput" style="display: none;" accept=".bdengine" />
+            <label for="fileInput" class="btn btn-sm btn-light border-white bg-white" style="margin-bottom: 5px;">Browse
+                File</label>
+            <br>
+            <button class="btn btn-success" onclick="processFile()">Process File</button>
+            <div id="message"></div>
+            <div id="error"></div>
+        </div>
+
+    </section>
+
+    <!-- Script to fix the heads -->
+    <script>
+        async function processFile() {
+            const fileInput = document.getElementById("fileInput");
+            const messageDiv = document.getElementById("message");
+            const errorDiv = document.getElementById("error");
+            messageDiv.textContent = "";
+            errorDiv.textContent = "";
+
+            if (!fileInput.files[0]) {
+                errorDiv.textContent = "Please select a file!";
+                return;
+            }
+
+            if (!fileInput.files[0].name.endsWith(".bdengine")) {
+                errorDiv.textContent = "Provided file isn't .bdengine!"
+                return;
+            }
+
+            try {
+                const file = fileInput.files[0];
+                const text = await file.text();
+                const decoded = await decode(text);
+                const fixes = fixJson(decoded);
+                const encoded = await encode(decoded);
+
+                if (fixes === 0) {
+                    messageDiv.textContent = "The provided file is not broken!"
+                    return;
+                }
+
+                // Trigger download
+                const blob = new Blob([encoded], { type: "text/plain" });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = "fixed_" + file.name;
+                a.click();
+                URL.revokeObjectURL(url);
+
+                messageDiv.textContent = `Fixed ${fixes} heads!`;
+            } catch (e) {
+                errorDiv.textContent = `Error: ${e.message}`;
+            }
+        }
+
+        async function decode(base64String) {
+            // Step 1: Base64 decode
+            const decodedBytes = atob(base64String)
+                .split("")
+                .map(c => c.charCodeAt(0));
+
+            // Step 2: GZIP decompress
+            const decompressed = pako.ungzip(new Uint8Array(decodedBytes));
+            const decompressedString = new TextDecoder().decode(decompressed);
+
+            // Step 3: Parse JSON
+            try {
+                return JSON.parse(decompressedString);
+            } catch (e) {
+                throw new Error("Failed to parse decompressed string as JSON");
+            }
+        }
+
+        function fixJson(json) {
+            let fixes = 0;
+            const children = json[0].children;
+
+            for (const child of children) {
+                if (!child.name.includes("player_head")) {
+                    continue;
+                }
+                if (!child.defaultTextureValue) {
+                    continue;
+                }
+                if (child.paintTexture === null) {
+                    continue;
+                }
+
+                // Remove paintTexture
+                delete child.paintTexture;
+
+                // Replace tagHead.Value
+                child.tagHead.Value = child.defaultTextureValue;
+
+                fixes++;
+            }
+
+            return fixes;
+        }
+
+        async function encode(json) {
+            // Step 1: Convert to JSON string (pretty-printed)
+            const jsonString = JSON.stringify(json, null, 2);
+
+            // Step 2: GZIP compress
+            const compressed = pako.gzip(jsonString);
+
+            // Step 3: Base64 encode
+            const base64String = btoa(
+                String.fromCharCode.apply(null, compressed)
+            );
+
+            return base64String;
+        }
+    </script>
+</body>
+
+</html>
